@@ -1,33 +1,109 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
+
+body {
+    background-image: url("./Images/sky.jpg");
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+
 }
-.container{
+
+.head {
+    margin-top: 50px;
+    position: static;
+}
+
+.container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 60px;
+    /* max-width: 1000px; */
 
 }
-.card{
+
+.card {
     border: 2px solid black;
-    border-radius: 20px;
-    background-color:aqua;
-    padding: 5px;
-    /* width: 250px; */
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+    margin-top: 50px;
+    height: 250px;
+    max-width: 280px;
 }
-.left{
+
+.left {
     /* display: flex; */
     /* padding: 10px; */
 }
-#head{
+
+#head {
     background-color: aqua;
 
 }
-.description{
-    display: flex;
-    gap: 90px;
+
+.head h1 {
+    background-color: rgb(49, 142, 204);
+    font-size: 40px;
+    padding: 10px;
+    border-radius: 20px;
 }
+
+.head input {
+    background-color: rgb(141, 173, 219);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #4db9da;
+    font-size: 20px;
+    width: 280px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.head button {
+    background-color: lightcoral;
+    font-size: large;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+.image {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    text-align: justify;
+}
+.image img{
+    height: 100px;
+    width: 100px;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* #weatherForm1{
+    position: fixed;
+    margin-top: 150px;
+} */
