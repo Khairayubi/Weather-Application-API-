@@ -24,7 +24,7 @@ body {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 60px;
-    /* max-width: 1000px; */
+    max-width: 1000px;
 
 }
 
@@ -74,8 +74,15 @@ body {
     font-size: large;
     padding: 10px;
     border-radius: 10px;
+    cursor: pointer;
 }
-
+.head button:hover{
+    background-color: white;
+    
+}
+.head button:active{
+    background-color: lightcoral;
+}
 
 
 

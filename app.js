@@ -1,20 +1,30 @@
 const div = document.querySelector(".container");
 // fetch('http://api.weatherapi.com/v1/current.json?key=b4db485d7c4c485fa6d84351232508&q=${city.value}&aqi=no')
 const form = document.getElementById("weatherForm");
-const names = [];
+
+const names = [""];
 form.addEventListener("submit", (e) => {
     e.preventDefault(); // stop form refresh
     const city = document.getElementById("city").value;
+    document.querySelector("#city").value = ""
+    if(!names.includes(city.toLowerCase())){
+    names.push(city.toLowerCase());
+    
+    
+    console.log(city + "added")
+    }
+    
+    
 
-
-
-    fetch(`http://api.weatherapi.com/v1/current.json?key=9b05f55551e14d4fbaa151508250701&q=${city}&aqi=no`)
+    
+    fetch(`http://api.weatherapi.com/v1/current.json?key=9b05f55551e14d4fbaa151508250701&q=${names[names.length-1]}&aqi=no`)
 
         .then(res => {
             return res.json()
         })
         .then(res => {
             console.log(res);
+            
 
             div.innerHTML += `
             <div class="card">
@@ -34,4 +44,4 @@ form.addEventListener("submit", (e) => {
             console.log(err);
 
         })
-});
+})
