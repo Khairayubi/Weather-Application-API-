@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
     
 
     
-    fetch(`http://api.weatherapi.com/v1/current.json?key=9b05f55551e14d4fbaa151508250701&q=${names[names.length-1]}&aqi=no`)
+    fetch(`https://api.weatherapi.com/v1/current.json?key=9b05f55551e14d4fbaa151508250701&q=${names[names.length-1]}&aqi=no`)
 
         .then(res => {
             return res.json()
